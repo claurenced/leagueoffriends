@@ -35,7 +35,7 @@ app.get('/past5Games', async (req, res) => {
         const matchID = gameIDs [i];
         const matchData = await axios.get("https://americas.api.riotgames.com" + "/lol/match/v5/matches/" + matchID + "?api_key=" + API_KEY)
         .then(response => response.data)
-        .catch(err =>err)
+        .catch(err => err)
     matchDataArray.push(matchData)
     }
 
